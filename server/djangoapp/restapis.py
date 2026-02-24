@@ -1,7 +1,7 @@
 # Uncomment the imports below before you add the function code
 import requests
 import os
-#from dotenv import load_dotenv
+from dotenv import load_dotenv
 
 load_dotenv()
 
@@ -23,6 +23,10 @@ def get_request(endpoint, **kwargs):
     try:
         # Call get method of requests library with URL and parameters
         response = requests.get(request_url)
+        # Temp for debugging reasons
+        print("Response status:", response.status_code)
+        print("Response body:", response.text[:200])
+        # End debugging section
         return response.json()
     except:
         # If any error occurs
