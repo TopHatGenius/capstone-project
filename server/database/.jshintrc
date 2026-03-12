@@ -1,1 +1,1 @@
-echo '{"esversion": 6}' > ~/Projects/capstone-project/server/database/.jshintrc
+{"esversion": 6}
